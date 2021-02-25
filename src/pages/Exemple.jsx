@@ -75,7 +75,7 @@ function Create() {
             <div style={{padding: 10}}>
                 <h2>O Conteudo abaixo é um micro-frontend</h2>
                 <RemoteReactComponent
-                    url="https://mybucketms1.s3.us-east-2.amazonaws.com/dist/Root/remoteEntry.js"
+                    url="http://localhost:3001/Root/remoteEntry.js"
                     module="Root" 
                     scope="Root"
                     basename={pathname.split('/')[1]}/>

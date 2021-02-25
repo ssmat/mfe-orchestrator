@@ -30,12 +30,12 @@ TabPanel.propTypes = {
 
 const routes = ['','exemple'];
 
-function allProps(index, link) {
+function allProps(index) {
     return {
         id: `full-width-tab-${index}`,
         'aria-controls': `full-width-tabpanel-${index}`,
         component: Link,
-        to:`/${routes[index]}`
+        to:`/${index}`
     };
 }
 
@@ -92,8 +92,8 @@ const Header = () => {
         <div>
         <AppBar position="static" color="default">
             <CustomTabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" aria-label="tabs example">
-                <CustomTab label="Home" {...allProps(0)} />
-                <CustomTab label={`Materiais para Divulgação`} {...allProps(1)} />
+                <CustomTab label="Home" {...allProps('')} />
+                <CustomTab label={`Materiais para Divulgação`} {...allProps('exemple')} />
             </CustomTabs>
         </AppBar>
         </div>
