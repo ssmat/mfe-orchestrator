@@ -21,10 +21,11 @@ const routeList = [
 ]
 
 const Routes = () => (
-    <Suspense fallback={<Loader/>}> 
+    <Suspense fallback={<Loader/>}>
         <BrowserRouter basename="/">
             <Switch>
                 {routeList.map((route, key) => {
+                    console.log(route);
                     return <Route key={key} exact={route.exact} path={route.path} component={route.component}/>
                 })}
             </Switch>

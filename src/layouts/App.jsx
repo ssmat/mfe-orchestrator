@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../components/Header';
 
-const LayoutHeader = ({ children }) => {
+const LayoutHeader = ({children}) => {
     return (
         <div>
             <Header/>
-            { children }
+            {children}
         </div>
     );
 };
